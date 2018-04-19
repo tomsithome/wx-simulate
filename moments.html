@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<style type="text/css">
+			.mui-bar .mui-btn-link{
+				color: #fff;
+			}
+			#img-bg{
+				height: 50%;
+				width: 100%;
+			}
+			#img-mine{
+				position: absolute;
+				height: 100px;
+				right: 10px;
+				top: 78%;
+			}
+			#mine{
+				position: absolute;
+				height: 20px;
+				line-height: 20px;
+				top: 86%;
+				right: 120px;
+				color: #fff;
+			}
+			#mui-content{
+				position: relative;
+				margin-bottom: 15%;
+			}
+			#refreshContainer{
+				overflow: auto;
+			}
+			.mui-media>a, .mui-ellipsis{
+				white-space: normal;
+			}
+			.mui-table-view-cell > a:not(.mui-btn).mui-active
+			{
+			    background-color: #fff;
+			}
+			.mui-table-view .mui-media-object{
+				width: 42px;
+			}
+			
+			.mui-preview-image.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #000;
+			}
+			.mui-preview-header,
+			.mui-preview-footer {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				z-index: 10;
+			}
+			.mui-preview-header {
+				height: 44px;
+				top: 0;
+			}
+			.mui-preview-footer {
+				height: 50px;
+				bottom: 0px;
+			}
+			.mui-preview-header .mui-preview-indicator {
+				display: block;
+				line-height: 25px;
+				color: #fff;
+				text-align: center;
+				margin: 15px auto 4;
+				width: 70px;
+				background-color: rgba(0, 0, 0, 0.4);
+				border-radius: 12px;
+				font-size: 16px;
+			}
+			.mui-preview-image {
+				display: none;
+				-webkit-animation-duration: 0.5s;
+				animation-duration: 0.5s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+			}
+			.mui-preview-image.mui-preview-in {
+				-webkit-animation-name: fadeIn;
+				animation-name: fadeIn;
+			}
+			.mui-preview-image.mui-preview-out {
+				background: none;
+				-webkit-animation-name: fadeOut;
+				animation-name: fadeOut;
+			}
+			.mui-preview-image.mui-preview-out .mui-preview-header,
+			.mui-preview-image.mui-preview-out .mui-preview-footer {
+				display: none;
+			}
+			.mui-zoom-scroller {
+				position: absolute;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				-webkit-backface-visibility: hidden;
+			}
+			.mui-zoom {
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+			}
+			.mui-slider .mui-slider-group .mui-slider-item img {
+				/*width: auto;*/
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+				width: 100%;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+				display: inline-table;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.mui-preview-loading {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			.mui-preview-loading.mui-active {
+				display: block;
+			}
+			.mui-preview-loading .mui-spinner-white {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -25px;
+				margin-top: -25px;
+				height: 50px;
+				width: 50px;
+			}
+			.mui-preview-image img.mui-transitioning {
+				-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+				transition: transform 0.5s ease, opacity 0.5s ease;
+			}
+			@-webkit-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			#sendimg img {
+				max-width: 100%;
+				height: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">				
+				<!--数据列表-->
+				<ul class="mui-table-view mui-table-view-chevron myContent">
+					<li id="mui-content" class="mui-content">
+						<img id="img-bg" src="img/yuantiao.jpg" alt="" />
+						<div id="mine">皮卡丘的弟弟皮痒</div>
+						<img id="img-mine" src="img/6.jpg" alt="" />
+					</li>
+					<!--......-->
+					<li class="mui-table-view-cell mui-media" title="幸福">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/1.jpg">
+							<div class="mui-media-body">
+								幸福
+								<p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								<div id="sendimg">
+									<img src="img/11.jpg" class="mui-col-xs-4" data-preview-src="" data-preview-group="1" alt="" />
+									<img src="img/12.jpg" class="mui-col-xs-4" data-preview-src="" data-preview-group="1" alt="" />
+									<img src="img/13.jpg" class="mui-col-xs-4" data-preview-src="" data-preview-group="1" alt="" />
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media" title="木屋">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/2.jpg">
+							<div class="mui-media-body">
+								木屋
+								<p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+								<div id="sendimg">
+									<img src="img/2.jpg" class="mui-col-xs-6" data-preview-src="" data-preview-group="2"  alt="" />
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div> 
+		<script src="js/mui.js"></script>
+		<script src="js/mui.zoom.js"></script>
+		<script src="js/mui.previewimage.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+			    pullRefresh : {
+				    container:"#refreshContainer",
+				    down : {
+				      contentdown : "下拉可以刷新",
+				      contentover : "释放立即刷新",
+				      contentrefresh : "正在刷新...",
+				      callback :pullfreshDown
+				    },
+				    up : {
+				      contentrefresh : "正在加载...",
+				      callback :pullfreshUp
+				    }
+				}
+			});
+			mui.previewImage();
+			var count = 0,urls;
+			function pullfreshDown(){    
+		    	urls = 'https://api.douban.com/v2/movie/top250?count=5&start=' + count;    	
+		    	mui.ajax({
+		    		url:urls,
+		    		type:'get',
+		    		dataType:'json',
+		    		success:function(data){  
+		    			for(var i=0;i<5;i++){
+		    				$('#mui-content').after('<li class="mui-table-view-cell mui-media" title="'+data.subjects[i].title+'">'+
+				        '<a href="javascript:;"><img class="mui-media-object mui-pull-left" src="'+data.subjects[i].images.small+'">'+
+				           '<div class="mui-media-body">'+data.subjects[i].title+'<p class="mui-ellipsis">'+data.subjects[i].original_title+'</p><div id="sendimg"><img src="'+data.subjects[i].images.medium+'" data-preview-src="" data-preview-group="'+ count + i +'"  class="mui-col-xs-6" alt="" /></div></div></a></li>')
+		    			}
+		    		} 
+		    	});
+		    	mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+		    	count = count + 5;
+		    };
+		    function pullfreshUp(){
+		    	mui.ajax({
+		    		url:'https://api.douban.com/v2/movie/in_theaters?count=6&start=' + count,
+		    		type:'get',
+		    		dataType:'json',
+		    		success:function(res){
+		    			for(var i=0;i<5;i++){
+		    				$('.myContent').append('<li class="mui-table-view-cell mui-media" title="'+res.subjects[i].title+'">'+
+				        '<a href="javascript:;"><img class="mui-media-object mui-pull-left" src="'+res.subjects[i].images.small+'">'+
+				           '<div class="mui-media-body">'+res.subjects[i].title+'<p class="mui-ellipsis">'+res.subjects[i].original_title+'</p><div id="sendimg"><img src="'+res.subjects[i].images.medium+'" data-preview-src="" data-preview-group="'+ count + i +'"  class="mui-col-xs-6" alt="" /></div></div></a></li>')    		
+		    			}
+		    		}
+		    	});
+		    	this.endPullupToRefresh(true|false);
+		    	count = count + 5; 
+		    };
+		</script>
+	</body>
+
+</html>

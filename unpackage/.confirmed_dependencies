@@ -1,0 +1,257 @@
+{
+  "index.html": {
+    "resources": [
+      "css/index.css",
+      "indexPage.html",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "fonts/iconfont.ttf"
+    ],
+    "refer": [
+      "find.html",
+      "indexPage.html",
+      "mailList.html",
+      "myInfo.html",
+      "moments.html"
+    ]
+  },
+  "find.html": {
+    "resources": [
+      "img/plp.png",
+      "img/yyy.png",
+      "img/game.png",
+      "img/py.png",
+      "img/shop.png",
+      "img/per.png",
+      "img/sys.png",
+      "fonts/mui.ttf",
+      "js/jquery.min.js",
+      "js/mui.js",
+      "css/mui.css",
+      "css/index.css",
+      "img/2.jpg",
+      "img/1.jpg"
+    ],
+    "refer": [
+      "shake.html",
+      "moments.html",
+      "pullrefresh_sub.html",
+      "pullrefresh_main.html"
+    ]
+  },
+  "indexPage.html": {
+    "resources": [
+      "img/7.jpg",
+      "img/2.jpg",
+      "js/jquery.min.js",
+      "img/1.jpg",
+      "img/6.jpg",
+      "img/4.jpg",
+      "js/mui.js",
+      "css/mui.css",
+      "img/3.jpg",
+      "img/5.jpg",
+      "css/index.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "subCharts.html",
+      "barcode.html",
+      "addFriend.html"
+    ]
+  },
+  "mailList.html": {
+    "resources": [
+      "img/8.jpg",
+      "img/icon2.jpg",
+      "img/9.jpg",
+      "img/icon3.jpg",
+      "img/icon4.jpg",
+      "img/10.jpg",
+      "img/icon1.jpg",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "img/4.jpg",
+      "img/5.jpg",
+      "img/7.jpg",
+      "img/2.jpg",
+      "img/1.jpg",
+      "img/6.jpg",
+      "img/3.jpg",
+      "fonts/mui.ttf",
+      "css/index.css"
+    ],
+    "refer": [
+      "subCharts.html"
+    ]
+  },
+  "myInfo.html": {
+    "resources": [
+      "img/face.png",
+      "img/set.png",
+      "img/box.png",
+      "img/bag.png",
+      "img/photo.png",
+      "img/money.png",
+      "img/5.jpg",
+      "js/jquery.min.js",
+      "js/mui.js",
+      "css/mui.css",
+      "css/index.css",
+      "fonts/mui.ttf",
+      "img/6.jpg",
+      "img/1.jpg"
+    ],
+    "refer": [
+      "set.html",
+      "wallet.html",
+      "emotion.html"
+    ]
+  },
+  "subCharts.html": {
+    "resources": [
+      "css/index.css",
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css",
+      "js/jquery.min.js"
+    ],
+    "refer": []
+  },
+  "shake.html": {
+    "resources": [
+      "img/shakedown.png",
+      "img/shakeup.png",
+      "js/mui.min.js",
+      "img/1.jpg",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "set.html": {
+    "resources": [
+      "css/index.css",
+      "js/jquery.min.js",
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "notice.html",
+      "feedback.html"
+    ]
+  },
+  "notice.html": {
+    "resources": [
+      "css/index.css",
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "wallet.html": {
+    "resources": [
+      "css/iconfont2.css",
+      "fonts/iconfont2.ttf",
+      "css/index.css",
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "addFriend.html": {
+    "resources": [
+      "img/mdm.png",
+      "img/sao.png",
+      "img/gzh.png",
+      "img/lxr.png",
+      "img/ld.png",
+      "css/index.css",
+      "js/jquery.min.js",
+      "js/mui.js",
+      "css/mui.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "contacts.html"
+    ]
+  },
+  "contacts.html": {
+    "resources": [
+      "css/index.css",
+      "js/jquery.min.js",
+      "img/1.jpg",
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css",
+      "img/2.jpg"
+    ],
+    "refer": []
+  },
+  "emotion.html": {
+    "resources": [
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.css",
+      "css/index.css",
+      "img/2.jpg",
+      "img/1.jpg",
+      "img/4.jpg",
+      "img/3.jpg",
+      "img/7.jpg",
+      "img/6.jpg",
+      "img/5.jpg",
+      "img/8.jpg"
+    ]
+  },
+  "feedback.html": {
+    "resources": [
+      "css/feedback.css",
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "js/feedback.js",
+      "css/mui.css"
+    ]
+  },
+  "moments.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "css/mui.css",
+      "css/index.css",
+      "img/yuantiao.jpg",
+      "img/6.jpg",
+      "img/2.jpg",
+      "img/1.jpg",
+      "img/11.jpg",
+      "img/12.jpg",
+      "js/jquery.min.js",
+      "js/mui.zoom.js",
+      "js/mui.previewimage.js",
+      "img/13.jpg"
+    ]
+  },
+  "barcode.html": {
+    "resources": [
+      "css/mui.min.css"
+    ]
+  },
+  "pullrefresh_main.html": {
+    "resources": [
+      "moments.html",
+      "css/index.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "moments.html"
+    ]
+  }
+}

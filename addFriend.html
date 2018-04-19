@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
+    <link href="css/index.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav myHeader">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;"><span style="font-size: 15px;">微信</span></a>
+		    <h1 class="mui-title" style="color: white;">添加朋友</h1>
+	</header>
+	<div class="mui-content">
+		<div class="mui-input-row mui-search" style="margin-top: 10px;">
+		    <input type="search" class="mui-input-clear" placeholder="微信号/手机号">
+		</div>
+		<ul class="mui-table-view">
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="img/ld.png">
+		            <div class="mui-media-body">
+		                雷达加朋友
+		                <p class="mui-ellipsis">添加身边的朋友</p>
+		            </div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="img/mdm.png">
+		            <div class="mui-media-body">
+		                面对面建群
+		                <p class="mui-ellipsis">与身边的朋友进入同一个群聊</p>
+		            </div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="img/sao.png">
+		            <div class="mui-media-body">
+		                扫一扫
+		                <p class="mui-ellipsis">扫描二维码名片</p>
+		            </div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media" id="contact">
+		        <a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="img/lxr.png">
+		            <div class="mui-media-body">
+		                手机联系人
+		                <p class="mui-ellipsis">添加通讯录中的朋友</p>
+		            </div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="img/gzh.png">
+		            <div class="mui-media-body">
+		                公众号
+		                <p class="mui-ellipsis">获取更多资讯和服务</p>
+		            </div>
+		        </a>
+		    </li>
+		</ul>
+	</div>
+	
+	
+    <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    mui.init();
+    $('#contact').on('tap',function(){
+	  	      	 mui.openWindow({
+	  	      	 	url:'contacts.html',
+	  	      	 	id:'contacts.html',
+	  	      	 	style:{},
+	  	      	 	show:{
+	  	      	 		autoShow:true,  
+	  	      	 		aniShow:'slide-in-right',
+	  	      	 		duration:100 
+	  	      	 	}
+	  	      	 })
+	  	    });
+    </script>
+</body>
+</html>

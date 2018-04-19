@@ -1,0 +1,17 @@
+.myHeader{
+	background: black;
+}
+.myTitle{
+	color: white;
+}
+.myHeader i{
+	color: white;
+	float: right;
+	font-weight: bold;
+}
+.mui-bar-tab .mui-tab-item.mui-active {
+	color: green;
+}
+.mui-slider-item img{
+	height: 100%;
+}

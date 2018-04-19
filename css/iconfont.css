@@ -1,0 +1,19 @@
+
+@font-face {font-family: "iconfont";
+  src:url('../fonts/iconfont.ttf?t=1491793067466') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfontwohover:before { content: "\e60d"; }
+
+.icon-tongxunlu:before { content: "\e69c"; }
+
+.icon-faxian:before { content: "\e60b"; }
+

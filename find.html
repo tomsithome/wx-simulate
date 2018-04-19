@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
+    <link href="css/index.css" rel="stylesheet"/>
+	<style>
+		.mui-content img{
+			vertical-align: middle;
+			width: 26px;
+			height: 26px;
+		}
+		.py{
+			float: right;
+			display: inline-block;
+			width: 26px;
+			height: 26px;
+			background: url(img/1.jpg) no-repeat center;
+			background-size: 26px;
+			margin-right: 15px;
+		}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav myHeader">
+	    <h1 class="mui-title myTitle">发现</h1>
+	</header>
+	<div class="mui-content">
+		<ul class="mui-table-view">
+	        <li class="mui-table-view-cell" id="moments">
+	            <a class="mui-navigate-right"><img src="img/py.png"> 朋友圈 <span class="py"></span></a>
+	        </li>
+	    </ul>
+	    <ul class="mui-table-view" style="margin-top: 20px;">
+	            <li class="mui-table-view-cell">
+	            	<a class="mui-navigate-right"><img src="img/sys.png"> 扫一扫</a>
+	            </li>
+	            <li class="mui-table-view-cell" id="shake">
+	            	<a class="mui-navigate-right"><img src="img/yyy.png"> 摇一摇</a>
+	            </li>
+	        </ul>
+	        <ul class="mui-table-view" style="margin-top: 20px;">
+	            <li class="mui-table-view-cell">
+	                <a class="mui-navigate-right"><img src="img/per.png"> 附近的人</a>
+	            </li>
+	            <li class="mui-table-view-cell">
+	            	<a class="mui-navigate-right"><img src="img/plp.png"> 漂流瓶</a>
+	            </li>
+	        </ul>
+	        <ul class="mui-table-view" style="margin-top: 20px;">
+	            <li class="mui-table-view-cell">
+	            	<a class="mui-navigate-right"><img src="img/shop.png"> 购物</a>
+	            </li>
+	            <li class="mui-table-view-cell">
+	            	<a class="mui-navigate-right"><img src="img/game.png"> 购物</a>
+	            </li>
+	        </ul>
+	</div>
+    <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+	    mui.init();
+	    $('#shake').on('tap',function(){
+	  	      	 mui.openWindow({
+	  	      	 	url:'shake.html',
+	  	      	 	id:'shake.html',
+	  	      	 	style:{},
+	  	      	 	show:{
+	  	      	 		autoShow:true,  
+	  	      	 		aniShow:'slide-in-right',
+	  	      	 		duration:100 
+	  	      	 	}
+	  	      	 })
+	  	});
+	  	$("#moments").on('tap',function(){
+	  		mui.openWindow({
+	  			url: 'pullrefresh_main.html',
+	  			id: 'pullrefresh_main.html',
+	  			style: {},
+	  			show: {
+	  				autoShow:true,
+	  				aniShow:'slide-in-right',
+	  				duration: 100
+	  			}
+	  		})
+	  	})
+    </script>
+</body>
+</html>
+

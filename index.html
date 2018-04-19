@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/iconfont.css" rel="stylesheet" />
+</head>
+<body>
+	<nav class="mui-bar mui-bar-tab">
+	    <a class="mui-tab-item mui-active" href="indexPage.html">
+	        <span class="mui-icon mui-icon-weixin"><span class="mui-badge">4</span></span>
+	        <span class="mui-tab-label">微信</span>
+	    </a>
+	    <a class="mui-tab-item" href="mailList.html">
+	        <span class="mui-icon iconfont icon-tongxunlu"></span>
+	        <span class="mui-tab-label">通讯录</span>
+	    </a>
+	    <a class="mui-tab-item" href="find.html">
+	        <span class="mui-icon iconfont icon-faxian"><span class="mui-badge">9</span></span>
+	        <span class="mui-tab-label">发现</span>
+	    </a>
+	    <a class="mui-tab-item" href="myInfo.html">
+	        <span class="mui-icon iconfont icon-iconfontwohover"></span>
+	        <span class="mui-tab-label">我</span>
+	    </a>
+	</nav>
+	
+	<script>
+		mui.init();
+
+		var subPages=['indexPage.html','mailList.html','find.html','myInfo.html'];
+   		var subStyle={
+   			top:0,
+   			bottom:'50px'
+   		}
+		mui.plusReady(function () {
+			var subs=[];
+				var self=plus.webview.currentWebview();
+   			    for(var i=0;i<subPages.length;i++){
+   			    	var sub=plus.webview.create(subPages[i],subPages[i],subStyle);
+   			    	subs.push(sub);
+   			    	sub.hide();
+   			    	self.append(sub);
+   			    }
+   			    plus.webview.show(subPages[0]);
+   			    mui('.mui-bar-tab').on('tap','a',function(e){
+   			      	 var spage=  this.getAttribute('href');
+   			      	 for(var i=0;i<subs.length;i++){
+   			      	 	subs[i].hide();
+   			      	 }
+   			      	 plus.webview.show(spage,'slide-in',100);
+   			    })
+	  	})
+	</script>
+</body>
+</html>

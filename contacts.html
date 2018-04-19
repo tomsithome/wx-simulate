@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <style type="text/css">
+    	.myContacts img{
+				vertical-align:middle;
+				width: 30px;
+				height: 30px;
+			}
+    </style>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav myHeader">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;"><span style="font-size: 15px;">添加朋友</span></a>
+		    <h1 class="mui-title" style="color: white;">通讯录朋友</h1>
+	</header>
+	<div class="mui-content">
+		<div class="mui-input-row mui-search" style="margin-top: 10px;">
+		    <input type="search" id="mySearch" class="mui-input-clear" placeholder="搜索">
+		</div>
+		<ul class="mui-table-view myContacts">
+			<li id="A" class="mui-table-view-divider">A</li>
+			<li class="mui-table-view-cell" title="a我"><img src='img/1.jpg'> a我</li>
+			<li id="T" class="mui-table-view-divider">T</li>
+			<li class="mui-table-view-cell" title="TT"><img src='img/2.jpg'> TT</li>
+		</ul>
+	</div>
+    <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    	mui.init();
+		mui.plusReady(function() {
+			plus.contacts.getAddressBook(plus.contacts.ADDRESSBOOK_PHONE, function(addressbook) {
+				addressbook.find(["displayName", "phoneNumbers"], function(contacts) {
+					for(var i = 0; i < contacts.length; i++) {
+						$('.myContacts').html('<li class="mui-table-view-cell" title='+contacts[i].phoneNumbers[0].value+'><a class="mui-navigate-right">'+contacts[i].displayName+contacts[i].phoneNumbers[0].value+'</a></li>');
+					}
+				}, function() {
+					alert("error");
+				});
+			}, function(e) {
+				alert("Get address book failed: " + e.message);
+			});
+			/*mui('.myContacts').on('tab','.mui-table-view-cell',function(){
+				$('#mySearch').val(this.getAttribute('title'));
+				console.log(this.getAttribute('title'));
+			})*/
+		});
+    </script>
+</body>
+</html>
